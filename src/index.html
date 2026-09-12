@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduMap - Tra cứu cơ sở giáo dục</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">🏫 <span>EduMap</span></div>
+  <div class="subtitle">Tra cứu cơ sở giáo dục bằng bản đồ số</div>
+</header>
+
+<main class="layout">
+  <aside class="sidebar">
+    <h1>Tìm kiếm trường</h1>
+    <input id="search" type="search" placeholder="Nhập tên trường, địa chỉ...">
+    <select id="level">
+      <option value="">Tất cả cấp học</option>
+      <option>Mầm non</option>
+      <option>Tiểu học</option>
+      <option>THCS</option>
+      <option>THPT</option>
+      <option>Cao đẳng</option>
+      <option>Đại học</option>
+    </select>
+    <button id="locateBtn" class="secondary">📍 Vị trí của tôi</button>
+    <div id="resultCount" class="count"></div>
+    <div id="schoolList" class="school-list"></div>
+  </aside>
+
+  <section class="map-area">
+    <div id="map"></div>
+    <div id="streetView"></div>
+  </section>
+</main>
+
+<div id="detail" class="detail hidden">
+  <button id="closeDetail" class="close">×</button>
+  <div id="detailContent"></div>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap">
+</script>
+</body>
+</html>

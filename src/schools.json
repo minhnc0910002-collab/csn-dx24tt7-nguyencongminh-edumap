@@ -1,0 +1,8 @@
+[
+  {"id":1,"name":"Trường Mầm non Hoa Sen","level":"Mầm non","address":"Phường Trấn Biên, Thành phố Đồng Nai","lat":10.9508,"lng":106.8171,"phone":"0251 0000 0001"},
+  {"id":2,"name":"Trường Tiểu học Nguyễn Du","level":"Tiểu học","address":"Phường Quyết Thắng, Thành phố Đồng Nai","lat":10.9520,"lng":106.8225,"phone":"0251 0000 0002"},
+  {"id":3,"name":"Trường THCS Trần Văn Ơn","level":"THCS","address":"Phường Tam Hiệp, Thành phố Đồng Nai","lat":10.9485,"lng":106.8300,"phone":"0251 0000 0003"},
+  {"id":4,"name":"Trường THPT Ngô Quyền","level":"THPT","address":"Phường Trung Dũng, Thành phố Đồng Nai","lat":10.9550,"lng":106.8180,"phone":"0251 0000 0004"},
+  {"id":5,"name":"Cao đẳng Mỹ thuật trang trí Đồng Nai","level":"Cao đẳng","address":"Phường Trung Dũng, Thành phố Đồng Nai","lat":10.9535,"lng":106.8250,"phone":"0251 0000 0005"},
+  {"id":6,"name":"Đại học Đồng Nai","level":"Đại học","address":"Phường Tân Hiệp, Thành phố Đồng Nai","lat":10.9600,"lng":106.8350,"phone":"0251 0000 0006"}
+]
