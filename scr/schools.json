@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Trường Mầm non Hoa Sen",
+    "level": "Mầm non",
+    "address": "510 Đ. Đồng Khởi, Tam Hiệp, Thành phố Đồng Nai",
+    "province": "Thành phố Đồng Nai",
+    "lat": 10.958297,
+    "lng": 106.857833,
+    "phone": "02513822962"
+  },
+  {
+    "id": 2,
+    "name": "Trường Tiểu học Nguyễn Huệ",
+    "level": "Tiểu học",
+    "address": "XW73+P5M, Ngô Sỹ Liên, Long Bình, Thành phố Đồng Nai",
+    "province": "Thành phố Đồng Nai",
+    "lat": 10.964344,
+    "lng": 106.902924,
+    "phone": "0613881591"
+  },
+  {
+    "id": 3,
+    "name": "Trường THCS Trần Hưng Đạo",
+    "level": "THCS",
+    "address": "372 Ba Mươi Tháng Tư, Trấn Biên, Thành phố Đồng Nai",
+    "province": "Thành phố Đồng Nai",
+    "lat": 10.955763,
+    "lng": 106.828267,
+    "phone": "02513822039"
+  },
+  {
+    "id": 4,
+    "name": "Trường THPT Ngô Quyền",
+    "level": "THPT",
+    "address": "XR3G+MG8, 61 Ba Mươi Tháng Tư, Khu phố 2, Trấn Biên, Thành phố Đồng Nai",
+    "province": "Thành phố Đồng Nai",
+    "lat": 10.954195,
+    "lng": 106.826022,
+    "phone": "02513829029"
+  },
+  {
+    "id": 5,
+    "name": "Trường Cao đẳng FPT Polytechnic cơ sở Đồng Nai",
+    "level": "Cao đẳng",
+    "address": "193 Đỗ Văn Thi, phường Trấn Biên, Thành phố Đồng Nai",
+    "province": "Thành phố Đồng Nai",
+    "lat": 10.937691,
+    "lng": 106.834898,
+    "phone": "0345690031"
+  },
+  {
+    "id": 6,
+    "name": "Trường Đại học Lạc Hồng",
+    "level": "Đại học",
+    "address": "10 Huỳnh Văn Nghệ, Trấn Biên, Đồng Nai, Việt Nam",
+    "province": "Đồng Nai",
+    "lat": 10.953035,
+    "lng": 106.802255,
+    "phone": "0941731973"
+  }
+]

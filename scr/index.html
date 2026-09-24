@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduMap Đồng Nai - Tra cứu cơ sở giáo dục</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">🏫 EduMap</div>
+  <div class="subtitle">Tra cứu cơ sở giáo dục trên địa bàn Thành phố Đồng Nai</div>
+</header>
+
+<main class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-title">
+      <h1>Tìm kiếm cơ sở giáo dục</h1>
+      <p>Tra cứu trường học theo tên, địa chỉ hoặc cấp học.</p>
+    </div>
+
+    <label for="search">Từ khóa</label>
+    <input id="search" type="search" placeholder="Nhập tên trường, địa chỉ...">
+
+    <label for="level">Cấp học</label>
+    <select id="level">
+      <option value="">Tất cả cấp học</option>
+      <option value="Mầm non">Mầm non</option>
+      <option value="Tiểu học">Tiểu học</option>
+      <option value="THCS">THCS</option>
+      <option value="THPT">THPT</option>
+      <option value="Cao đẳng">Cao đẳng</option>
+      <option value="Đại học">Đại học</option>
+    </select>
+
+    <button id="locateBtn" class="secondary">📍 Vị trí của tôi</button>
+    <div id="resultCount" class="count"></div>
+    <div id="schoolList" class="school-list"></div>
+  </aside>
+
+  <section class="map-area">
+    <div id="map"></div>
+    <div class="map-hint">💡 Chọn một trường để xem thông tin, Street View và chỉ đường.</div>
+  </section>
+</main>
+
+  <button id="closeDetail" class="close" aria-label="Đóng">×</button>
+  <div id="detailContent"></div>
+</section>
+
+<div id="mapsError" class="maps-error hidden"></div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+<script>
+  // Google Maps gọi hàm này nếu API key/billing/restriction có vấn đề.
+  window.gm_authFailure = function () {
+    const box = document.getElementById("mapsError");
+    if (box) {
+      box.classList.remove("hidden");
+      box.innerHTML = "<strong>Google Maps chưa được xác thực.</strong><br>Kiểm tra Maps JavaScript API, Billing và HTTP referrer của API key trong Google Cloud Console.";
+    }
+  };
+
+  // Tải API sau khi APP_CONFIG đã tồn tại. Không dùng libraries=places vì phiên bản này không sử dụng Places Autocomplete.
+  (function loadGoogleMaps() {
+    if (!APP_CONFIG.googleMapsApiKey || APP_CONFIG.googleMapsApiKey.includes("YOUR_")) {
+      const box = document.getElementById("mapsError");
+      box.classList.remove("hidden");
+      box.textContent = "Chưa cấu hình Google Maps API Key. Mở config.js và điền googleMapsApiKey.";
+      return;
+    }
+    const script = document.createElement("script");
+    script.async = true;
+    script.defer = true;
+    script.src = "https://maps.googleapis.com/maps/api/js?key=" + encodeURIComponent(APP_CONFIG.googleMapsApiKey) + "&callback=initMap&loading=async";
+    script.onerror = function () {
+      const box = document.getElementById("mapsError");
+      box.classList.remove("hidden");
+      box.textContent = "Không tải được Google Maps. Kiểm tra kết nối Internet và API Key.";
+    };
+    document.head.appendChild(script);
+  })();
+</script>
+</body>
+</html>
