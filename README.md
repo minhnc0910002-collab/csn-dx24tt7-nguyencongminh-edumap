@@ -14,8 +14,7 @@ Website tra cứu và xác định vị trí các cơ sở giáo dục trên đ�
 ## Chạy website
 1. Giải nén thư mục.
 2. Mở `index.html` bằng trình duyệt hoặc chạy bằng Live Server/XAMPP.
-3. API Key Google Maps đã được giữ theo file mẫu đã cung cấp. Khi triển khai thật, nên giới hạn API Key theo tên miền/IP và bật các API cần thiết trong Google Cloud.
-4. Nếu dùng MySQL, import `database.sql`.
+3. Nếu dùng MySQL, import `database.sql`.
 
 ## Lưu ý
 `index.html` hiện dùng dữ liệu trong `app.js` để chạy bản demo độc lập. `database.sql` là cấu trúc dữ liệu để dùng khi nối PHP/MySQL ở bước tiếp theo.
